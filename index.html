@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<!--<link rel="stylesheet" href="css/reset.css" />-->
+		<link rel="stylesheet" href="css/style.css" />
+		
+		<script type="text/javascript" src="Jquery.js"></script>
+		<script type="text/javascript">
+		
+		
+			window.onload = function () { 
+				var d = new Date();
+				document.querySelector(".date p span").innerHTML = d.toDateString();
+	
+			}
+
+			$(document).ready( function(){
+				
+				// sign Up //////////////////
+				
+				$("#signup").click( function(){
+					document.querySelector("#Panel h2").innerHTML = "Sign Up";
+					$("#black").show("fast",function(){
+						$("#Panel form#signupForm").show("fast",function(){
+							$("#Panel").slideDown("slow",function(){
+								$("#Panel h2").show().animate({left: '-120px'});
+								$("#Panel .close").show().animate({top: '-25px'});
+							});
+						});
+						
+					});
+				})
+				/* Close *//////////////
+				$("#Panel .close").click( function(){
+					$("#black").hide("fast");
+					$("#Panel").hide("fast");
+					$("#Panel h2").hide().animate({left: '0px'});
+					$("#Panel .close").hide().animate({top: '0px'});
+					$("#Panel form#signupForm").hide("fast");
+					$("#Panel form#loginForm").hide("fast");
+				})
+				///////////////////////////
+				
+				/* Login Form */
+				$("#login").click( function(){
+					document.querySelector("#Panel h2").innerHTML = "Login";
+					$("#black").show("fast",function(){
+						$("#Panel form#loginForm").show("fast",function(){
+							$("#Panel").slideDown("slow",function(){
+								$("#Panel h2").show().animate({left: '-95px'});
+								$("#Panel .close").show().animate({top: '-25px'});
+							});
+						});
+						
+					});
+				})
+			})
+			
+			/////////////////////////////
+			
+			////////////* Slider *///////
+			$(document).ready(function(){
+				
+				$("#right").click(function(){
+					$("#slider .imageCaption:nth-of-type(1)").hide("Slow");
+					$("#slider .imageCaption:nth-of-type(3)").show("Slow");
+					$("#slider .caption").slideUp("Slow",function(){
+						$("#slider .caption").slideDown("Slow");
+					});
+					
+				})
+				$("#left").click(function(){
+					$("#slider .imageCaption:nth-of-type(3)").hide("Slow");
+					$("#slider .imageCaption:nth-of-type(1)").show("Slow");
+					$("#slider .caption").slideUp("Slow",function(){
+						$("#slider .caption").slideDown("Slow");
+					});
+				})
+			})
+			
+		</script>
+	</head>
+	
+	<body>
+	
+		<a href="loginFolder/index.php"><div id="login">
+			<p>Log In</p>
+		</div></a>
+	
+		
+			
+		<header>
+			<div class="topHeader">
+				<h1>Karachi Club</h1>
+				<div class="ceoMesg">
+						<p><span>CEO <br /> Mustafa Abbas</span><br />
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</p>
+						<img src="images/ceo1.jpg" alt="CEO" />
+				</div>
+				<div class="date">
+					<p>Today: <span></span></p>
+				</div>	
+			</div>
+			<nav>
+					<ul>
+						<li><a class="selected" href="#">Home</a></li>
+						<li><a href="#">facilities</a></li>
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Photos</a></li>
+						<li><a href="#">About Us</a></li>
+					</ul>
+			</nav>
+		</header>
+		
+		<div id="container">
+			<section id="slider">
+			
+				<div class="imageCaption">
+					<div class="caption">	
+						<a href="#">	
+							<h3>Swiming Pool</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+						</a>
+					</div>
+					<img src="images/Pool.jpg" alt="Swimming Pool" />
+				</div>
+				<a href="#">
+					<div class="imageCaption">
+						<div class="caption">	
+						<a href="#">	
+							<h3>Tennies</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+						</a>
+						</div>
+						<img src="images/tennis.jpg" alt="Tennis" />
+					</div>
+				</a>
+				
+				<div class="imageCaption">
+					<div class="caption">	
+						<a href="#">	
+							<h3>Golf</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+						</a>
+						</div>
+					<img src="images/golf.jpg" alt="Golf" />
+				</div>
+				
+				
+				<div id="left"></div>
+				<div id="right"></div>
+				
+				
+				
+				
+				
+			</section>
+			
+			<section id="grids">
+				<div class="grid1">
+					<h2>Club Events</h2>
+				</div>
+				<div class="grid2">
+					<h2>Latest Messege</h2>
+				</div>
+				<div class="grid3">
+					<h2>Club New</h2>
+				</div>
+			</section>
+			
+			
+			
+			<section id="facilities">
+					<h2>facilities</h2>
+					<a href="#"><img src="" alt="" /></a>
+					<a href="#"><img src="" alt="" /></a>
+					<a href="#"><img src="" alt="" /></a>
+			</section>
+			
+			
+			
+			<footer>
+				<nav>
+					<ul>
+						<li><a class="selected" href="#">Home</a></li>
+						<li><a href="#">facilities</a></li>
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Photos</a></li>
+						<li><a href="#">About Us</a></li>
+					</ul>
+				</nav>
+				
+				<address>Copyright  &copy; 2017 - 2019 Karachi Club. All Rights Reserved</address>
+				
+			</footer>
+		</div>
+	</body>
+</html>

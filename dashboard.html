@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<!--<link rel="stylesheet" href="css/reset.css" />-->
+		<link rel="stylesheet" href="css/style.css" />
+		
+		<script type="text/javascript" src="Jquery.js"></script>
+		<script type="text/javascript">
+		
+		
+			window.onload = function () { 
+				var d = new Date();
+				document.querySelector(".date p span").innerHTML = d.toDateString();
+	
+			}
+
+			$(document).ready( function(){
+				
+				// sign Up //////////////////
+				
+				$("#signup,.userSetting").click( function(){
+					document.querySelector("#Panel h2").innerHTML = "Sign Up";
+					$("#black").show("fast",function(){
+						$("#Panel form#signupForm").show("fast",function(){
+							$("#Panel").slideDown("slow",function(){
+								$("#Panel h2").show().animate({left: '-120px'});
+								$("#Panel .close").show().animate({top: '-25px'});
+							});
+						});
+						
+					});
+				})
+				/* Close *//////////////
+				$("#Panel .close").click( function(){
+					$("#black").hide("fast");
+					$("#Panel").hide("fast");
+					$("#Panel h2").hide().animate({left: '0px'});
+					$("#Panel .close").hide().animate({top: '0px'});
+					$("#Panel form#signupForm").hide("fast");
+					$("#Panel form#loginForm").hide("fast");
+				})
+				///////////////////////////
+				
+				/* Login Form */
+				$("#login, .userHistory").click( function(){
+					document.querySelector("#Panel h2").innerHTML = "Login";
+					$("#black").show("fast",function(){
+						$("#Panel form#loginForm").show("fast",function(){
+							$("#Panel").slideDown("slow",function(){
+								$("#Panel h2").show().animate({left: '-95px'});
+								$("#Panel .close").show().animate({top: '-25px'});
+							});
+						});
+						
+					});
+				})
+			})
+			
+			/////////////////////////////
+			
+			////////////* Slider *///////
+			$(document).ready(function(){
+				
+				$("#right").click(function(){
+					$("#slider .imageCaption:nth-of-type(1)").hide("Slow");
+					$("#slider .imageCaption:nth-of-type(3)").show("Slow");
+					$("#slider .caption").slideUp("Slow",function(){
+						$("#slider .caption").slideDown("Slow");
+					});
+					
+				})
+				$("#left").click(function(){
+					$("#slider .imageCaption:nth-of-type(3)").hide("Slow");
+					$("#slider .imageCaption:nth-of-type(1)").show("Slow");
+					$("#slider .caption").slideUp("Slow",function(){
+						$("#slider .caption").slideDown("Slow");
+					});
+				})
+				
+				$(".profilePic").hover(function(){
+					$(".profilePic em").slideDown("fast");
+				})
+				
+				
+				
+				
+				$(".profilePic").mouseout(function(){
+					$(".profilePic em").slideUp("fast");
+					
+				})
+			})
+			
+		</script>
+	</head>
+	
+	<body>
+	
+		
+		<!-- Sign up Panel -->
+		<div id="Panel">
+			<div class="close"></div>
+			<h2></h2>
+			<form id="signupForm" action="" method="">
+				<table>
+					<tr>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label for="userName">User Name</label></td>
+					</tr>
+					<tr>
+						<td><input id="userName" type="text" /></td>
+					</tr>
+					<tr>
+						<td><label for="email">Email Address</label></td>
+					</tr>
+					<tr>
+						<td><input id="email" type="Email" /></td>
+					</tr>
+					<tr>
+						<td><label for="pass">Password</label></td>
+					</tr>
+					<tr>
+						<td><input id="pass" type="Password" /></td>
+					</tr>
+					<tr>
+						<td><label for="conpass">Confirm Password</label></td>
+					</tr>
+					<tr>
+						<td><input id="conpass" type="Password" /></td>
+					</tr>
+					<tr>
+						<td><label for="vc">Verification Code</label></td>
+					</tr>
+					<tr>
+						<td><input id="vc" type="pass" /></td>
+					</tr>
+					<tr>
+						<td><input type="submit" value="Sign Up"/></td>
+					</tr>
+				</table>
+			</form>
+			
+			<form id="loginForm" action="" method="">
+				<table>
+					<tr>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label for="userN">User Name</label></td>
+					</tr>
+					<tr>
+						<td><input id="userN" type="text" /></td>
+					</tr>
+					<tr>
+						<td><label for="pa">Password</label></td>
+					</tr>
+					<tr>
+						<td><input id="pa" type="Password" /></td>
+					</tr>
+					<tr>
+						<td><input type="submit" value="Login"/></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<!-- Panel End -->
+
+	
+		<!-- Black Screen ---->
+		<div id="black">
+		
+		</div>
+		
+		<!-------------------->
+			
+		<header>
+			
+				<div class="topHeaderBoard">
+				
+					<input id="search" type="text" placeholder="Search"/>
+					<a href="index.html"><h1>Karachi <span>Club</span></h1></a>
+					<em>Log Out</em>
+			
+				</div>
+				<div class="basicInfo">
+				<div class="forMiddle">
+					<div class="profilePic"><img src="images/ceo1.jpg" alt="CEO" /><em>Change</em></div>
+					<div class="bio">
+						<h3>Mustafa Abbas</h3><br />
+						<em>Karachi, Sindh, Pakistan</em>
+					</div>
+					<div class="setPanel">
+						<div class="userSetting">Setting</div>
+						<div class="userHistory">History</div>
+					</div>
+				</div>
+				</div>
+			
+			<nav>
+					<ul>
+						<li><a class="selected" href="index.html">Home</a></li>
+						<li><a href="#">facilities</a></li>
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Photos</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="Forum.php">Forum</a></li>
+					</ul>
+			</nav>
+		</header>
+		
+		
+			<section id="slider">
+			
+				
+				
+				
+				
+				
+				
+				
+				
+			</section>
+			
+			<section id="grids">
+				<div class="grid1">
+					<h2>Club Events</h2>
+				</div>
+				<div class="grid2">
+					<h2>Latest Messege</h2>
+				</div>
+				<div class="grid3">
+					<h2>Club New</h2>
+				</div>
+			</section>
+			
+			
+			
+			<section id="facilities">
+					<h2>facilities</h2>
+					<a href="#"><img src="" alt="" /></a>
+					<a href="#"><img src="" alt="" /></a>
+					<a href="#"><img src="" alt="" /></a>
+			</section>
+			
+			
+			
+			<footer>
+				<nav>
+					<ul>
+						<li><a class="selected" href="#">Home</a></li>
+						<li><a href="#">facilities</a></li>
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Photos</a></li>
+						<li><a href="#">About Us</a></li>
+					</ul>
+				</nav>
+				
+				<address>Copyright  &copy; 2017 - 2019 Karachi Club. All Rights Reserved</address>
+				
+			</footer>
+		
+	</body>
+</html>
